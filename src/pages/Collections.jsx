@@ -71,7 +71,7 @@ const Collections = () => {
     script.textContent = JSON.stringify({
       "@context": "https://schema.org",
       "@type": "ItemList",
-      name: "Cgee_here Collections",
+      name: "CTIF Collections",
       numberOfItems: filteredProducts.length,
       itemListElement: filteredProducts.map((p, idx) => ({
         "@type": "ListItem",

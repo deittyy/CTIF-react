@@ -70,9 +70,10 @@ h2 {
 }
 
 .sidebar-logo img{
-  margin-bottom: 2.5rem;
-  width: 100%;
+  margin-bottom: 1rem;
+  max-width: 100%;
   width: 100px;
+  /* padding-top: 2rem; */
 }
 
 /* .sidebar-logo span { color: var(--purple); } */
@@ -81,7 +82,7 @@ h2 {
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 .nav-link {
@@ -352,6 +353,11 @@ h2 {
   aspect-ratio: 1 / 1;
 }
 
+.nav-link i, .cart-icon-side i {
+  margin-right: 10px;
+  width: 20px;
+}
+
 .thumbnails {
   display: flex;
   gap: 0.8rem;
@@ -574,8 +580,6 @@ h2 {
   }
 }
 
-
-
 .size-options, .color-options {
   display: flex;
   gap: 0.8rem;
@@ -646,7 +650,7 @@ h2 {
 
 
 .search-input {
-  /* flex: 1; */
+  /* flex: ; */
   min-width: 180px;
   padding: 0.4rem 1rem;
   border: 1px solid var(--grey-mid);
@@ -655,6 +659,7 @@ h2 {
   background: white;
   outline: none;
 }
+
 
 .search-input:focus {
   border-color: var(--purple);
@@ -880,21 +885,27 @@ footer {
   }
   .menu-toggle {
   position: fixed;
-  top: 1rem;
+  top:    1rem;
   left: 1rem;
   z-index: 102;
   background: var(--purple);
   color: white;
-  padding: 0.5rem 0.8rem;
+  padding: 0.5rem 0.8rem; 
   border-radius: 30px;
   cursor: pointer;
   border: none;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
+.sidebar-logo img {
+  padding-top: 2rem;
+}
+
 .main-content {
-    padding-top: 3rem;  /* creates space for the fixed toggle */
+    padding-top: 0;  /* creates space for the fixed toggle */
+    /* height: 100%; */
+    /* position: fixed; */
   }
   
   /* Adjust search bar so it doesn't hide behind toggle */
@@ -903,8 +914,16 @@ footer {
   /* Or alternatively, make search input width smaller on mobile */
   .search-input {
     width: calc(100% - 12rem);
+    
     /* margin-left: auto; */
   }
+  .search-bar {
+  padding-left: 35px;
+  /* position: absolute; */
+  top: 1rem;
+  right: 1rem;
+  
+}
   .product-grid {
     gap: 1rem;
     grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));

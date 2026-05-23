@@ -21,7 +21,7 @@ const CartSidebar = () => {
       "cgee_order",
       JSON.stringify({ name, address, state, phone, cart }),
     );
-    window.location.href = "https://instagram.com/cgee_here";
+    window.location.href = "https://instagram.com/cgeehere";
   };
 
   return (

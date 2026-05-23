@@ -18,8 +18,8 @@ const Sidebar = () => {
         ☰
       </button>
       <div className={`sidebar ${mobileOpen ? "open-mobile" : ""}`}>
-       <div className="sidebar-logo">
-         <img src="./CGEE PNG BLACK.png" alt="" />
+        <div className="sidebar-logo">
+          <img src="./CGEE PNG BLACK.png" alt="" />
         </div>
         <div className="sidebar-nav">
           <Link
@@ -27,6 +27,7 @@ const Sidebar = () => {
             className={`nav-link ${isActive("/") ? "active" : ""}`}
             onClick={() => setMobileOpen(false)}
           >
+            <i className="fas fa-home"></i>
             Home
           </Link>
           <Link
@@ -34,6 +35,7 @@ const Sidebar = () => {
             className={`nav-link ${isActive("/collections") ? "active" : ""}`}
             onClick={() => setMobileOpen(false)}
           >
+            <i className="fas fa-tshirt"></i>
             Collections
           </Link>
           <Link
@@ -41,6 +43,8 @@ const Sidebar = () => {
             className={`nav-link ${isActive("/about") ? "active" : ""}`}
             onClick={() => setMobileOpen(false)}
           >
+            <i className="fas fa-info-circle"></i>
+            
             About
           </Link>
         </div>
