@@ -10,9 +10,7 @@ const About = () => {
           archive emotions.
         </p>
         <p>
-          The brand exists for those who almost turned a nuisance, then found
-          their pattern. Purple for royalty, grey for the in‑between, white for
-          new beginnings.
+          Purple for royalty, grey for the in‑between, white for new beginnings.
         </p>
         <p>
           <strong>Owner & creative director:</strong> @cgee_here (Instagram)
@@ -41,9 +39,6 @@ const About = () => {
           </a>
         </div>
       </div>
-      <footer>
-        © 2025 Cgee_here — vintage multiversal / Lagos to the cosmos
-      </footer>
     </div>
   );
 };
