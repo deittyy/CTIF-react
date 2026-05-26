@@ -7,24 +7,19 @@ import {
   TwitterShareButton,
   WhatsappShareButton,
 } from "react-share";
-import { FiHeart, FiShare2, FiStar } from "react-icons/fi";
+import { FiHeart, FiShare2 } from "react-icons/fi";
 import { toast } from "react-toastify";
 
 const ProductModal = ({ product, onClose, onAddToCart }) => {
   const [selectedSize, setSelectedSize] = useState(product.sizes[0]);
-  const [selectedColor, setSelectedColor] = useState(product.colors[0]);
   const [activeImage, setActiveImage] = useState("front");
-  const [reviews] = useState([
-    { user: "LagosLover", rating: 5, comment: "Amazing quality!" },
-    { user: "VintageQueen", rating: 4, comment: "Love the purple tone." },
-  ]);
   const { addToWishlist } = useWishlist();
   const related = allProducts
     .filter((p) => p.id !== product.id && p.inStock)
     .slice(0, 3);
 
   const handleAdd = () => {
-    onAddToCart({ ...product, selectedSize, selectedColor, qty: 1 });
+    onAddToCart({ ...product, selectedSize, qty: 1 });
     onClose();
   };
 
@@ -61,17 +56,6 @@ const ProductModal = ({ product, onClose, onAddToCart }) => {
                 </button>
               ))}
             </div>
-            <div className="color-selector">
-              <strong>Color:</strong>{" "}
-              {product.colors.map((c) => (
-                <button
-                  key={c}
-                  className={`color-opt ${selectedColor === c ? "selected" : ""}`}
-                  onClick={() => setSelectedColor(c)}
-                  style={{ backgroundColor: c.toLowerCase() }}
-                ></button>
-              ))}
-            </div>
             <div className="modal-actions">
               <button className="add-to-cart-modal" onClick={handleAdd}>
                 Add to Cart
@@ -99,14 +83,6 @@ const ProductModal = ({ product, onClose, onAddToCart }) => {
               <FacebookShareButton url={shareUrl} quote={title}>
                 <button>Facebook</button>
               </FacebookShareButton>
-            </div>
-            <div className="reviews">
-              <strong>Reviews ({reviews.length})</strong>
-              {reviews.map((r, i) => (
-                <div key={i} className="review">
-                  <FiStar /> {r.user}: {r.comment}
-                </div>
-              ))}
             </div>
           </div>
         </div>
