@@ -1,12 +1,12 @@
 import { Link, useLocation } from "react-router-dom";
 import { useCart } from "../context/CartContext";
+import { useSidebar } from "../context/SidebarContext";
 import { FiHome, FiGrid, FiInfo, FiShoppingCart } from "react-icons/fi";
-import { useState } from "react";
 
 const Sidebar = () => {
   const { totalItems, toggleCart } = useCart();
+  const { mobileOpen, setMobileOpen } = useSidebar();
   const location = useLocation();
-  const [mobileOpen, setMobileOpen] = useState(false);
 
   const isActive = (path) => location.pathname === path;
 

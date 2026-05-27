@@ -1,20 +1,95 @@
-<<<<<<< HEAD
-# cgee
-=======
-# React + Vite
+# CGEE's Store - CTIF (Cgee Thinks It Fits)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern e-commerce application built with React and Vite for selling custom clothing and fashion items.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Responsive Design** - Mobile-first approach with smooth sidebar navigation
+- **Product Collections** - Browse curated collections of CTIF apparel
+- **Shopping Cart** - Add/remove items with real-time cart updates
+- **Wishlist** - Save favorite items for later
+- **Hero Video** - Dynamic video background on home page
+- **Newsletter Signup** - Subscribe to updates and promotions
+- **Smooth Navigation** - Auto-closing sidebar for better mobile UX
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Frontend Framework** - React 18
+- **Build Tool** - Vite
+- **Styling** - CSS3
+- **State Management** - React Context API
+- **Routing** - React Router v6
+- **Icons** - React Icons
+- **Notifications** - React Toastify
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
->>>>>>> a6f5b23 (Initiial commit: CGEE'S STORE)
+### Prerequisites
+
+- Node.js (v14 or higher)
+- npm or yarn
+
+### Installation
+
+```bash
+npm install
+```
+
+### Development
+
+```bash
+npm run dev
+```
+
+Visit `http://localhost:5173` to view the app.
+
+### Build
+
+```bash
+npm run build
+```
+
+## Project Structure
+
+```
+src/
+├── components/        # Reusable UI components
+│   ├── Sidebar.jsx
+│   ├── CartSidebar.jsx
+│   ├── ProductModal.jsx
+│   ├── NewsletterPopup.jsx
+│   ├── BackToTop.jsx
+│   └── SizeGuide.jsx
+├── pages/            # Page components
+│   ├── Home.jsx
+│   ├── Collections.jsx
+│   └── About.jsx
+├── context/          # React Context for state management
+│   ├── CartContext.jsx
+│   ├── WishlistContext.jsx
+│   └── SidebarContext.jsx
+├── data/            # Static data
+│   └── products.js
+├── App.jsx          # Main app component
+├── main.jsx         # Entry point
+└── App.css          # Global styles
+```
+
+## Features in Detail
+
+### Mobile Navigation
+The sidebar automatically closes when clicking anywhere on the main content area, providing a seamless mobile experience.
+
+### Cart Management
+- Add/remove items from cart
+- View cart total and item count
+- Persistent cart state
+
+### Product Discovery
+- Browse home page with featured content
+- Explore collections
+- Learn about the brand
+
+## License
+
+All rights reserved © CGEE's Store

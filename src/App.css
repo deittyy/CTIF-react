@@ -7,7 +7,7 @@
 body {
   background: #f5f0eb;
   color: #1f1e1e;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   overflow-x: hidden;
 }
 
@@ -23,8 +23,11 @@ body {
   --shadow-md: 0 8px 20px rgba(0, 0, 0, 0.06);
 }
 
-h1, h2, h3, .logo {
-  font-family: 'Syne', sans-serif;
+h1,
+h2,
+h3,
+.logo {
+  font-family: "Syne", sans-serif;
   font-weight: 600;
   letter-spacing: -0.02em;
 }
@@ -235,7 +238,9 @@ h2 {
   background: var(--white);
   border-radius: 20px;
   overflow: hidden;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
   box-shadow: var(--shadow-sm);
   cursor: pointer;
 }
@@ -354,8 +359,14 @@ h2 {
 }
 
 @keyframes modalFadeIn {
-  from { opacity: 0; transform: scale(0.96); }
-  to { opacity: 1; transform: scale(1); }
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 .modal-grid {
@@ -456,7 +467,9 @@ h2 {
 
 .color-opt.selected {
   border-color: var(--purple-deep);
-  box-shadow: 0 0 0 2px white, 0 0 0 4px var(--purple);
+  box-shadow:
+    0 0 0 2px white,
+    0 0 0 4px var(--purple);
 }
 
 .modal-actions {
@@ -754,7 +767,7 @@ footer {
 }
 
 .popup-content h3 {
-  font-family: 'Syne', sans-serif;
+  font-family: "Syne", sans-serif;
   font-size: 1.4rem;
   color: var(--purple-deep);
   margin-bottom: 0.5rem;
@@ -817,8 +830,14 @@ footer {
 }
 
 @keyframes slideUp {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Aesthetic Polish */
@@ -830,7 +849,7 @@ body::before {
   width: 100%;
   height: 100%;
   pointer-events: none;
-  background-image: url('https://grainy-gradients.vercel.app/grain.svg');
+  background-image: url("https://grainy-gradients.vercel.app/grain.svg");
   opacity: 0.03;
   z-index: 9999;
 }
@@ -842,7 +861,10 @@ a,
 .quick-cart,
 .add-to-cart-modal,
 .btn-cart {
-  cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="%236b4e71"><circle cx="12" cy="12" r="10"/></svg>') 12 12, auto;
+  cursor:
+    url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="%236b4e71"><circle cx="12" cy="12" r="10"/></svg>')
+      12 12,
+    auto;
 }
 
 /* RESPONSIVE FIXES (including removal of top padding) */

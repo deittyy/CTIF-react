@@ -33,7 +33,9 @@ const NewsletterPopup = () => {
         throw new Error("Formspree submission failed");
       }
 
-      toast.success("Thanks for subscribing! Check your email for exclusive updates.");
+      toast.success(
+        "Thanks for subscribing! Check your email for exclusive updates.",
+      );
       sessionStorage.setItem("newsletter_seen", "true");
       setVisible(false);
       setEmail("");
