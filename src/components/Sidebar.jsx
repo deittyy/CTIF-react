@@ -4,7 +4,7 @@ import { useSidebar } from "../context/SidebarContext";
 import { FiHome, FiGrid, FiInfo, FiShoppingCart } from "react-icons/fi";
 
 const Sidebar = () => {
-  const { totalItems, toggleCart } = useCart();
+  const { totalItems } = useCart();
   const { mobileOpen, setMobileOpen } = useSidebar();
   const location = useLocation();
 
@@ -45,12 +45,16 @@ const Sidebar = () => {
             <FiInfo /> About
           </Link>
         </div>
-        <div className="cart-icon-side" onClick={toggleCart}>
+        <Link
+          to="/cart"
+          className={`cart-icon-side ${isActive("/cart") ? "active" : ""}`}
+          onClick={() => setMobileOpen(false)}
+        >
           <span>
             <FiShoppingCart /> Cart
           </span>
           <span className="cart-count-side">{totalItems}</span>
-        </div>
+        </Link>
       </div>
     </>
   );

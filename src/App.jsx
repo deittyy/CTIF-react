@@ -8,7 +8,7 @@ import Sidebar from "./components/Sidebar";
 import Home from "./pages/Home";
 import Collections from "./pages/Collections";
 import About from "./pages/About";
-import CartSidebar from "./components/CartSidebar";
+import Cart from "./pages/Cart";
 import BackToTop from "./components/BackToTop";
 import NewsletterPopup from "./components/NewsletterPopup";
 import "./App.css";
@@ -27,6 +27,7 @@ const AppContent = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/collections" element={<Collections />} />
+          <Route path="/cart" element={<Cart />} />
           <Route path="/about" element={<About />} />
         </Routes>
       </div>
@@ -41,7 +42,6 @@ function App() {
         <WishlistProvider>
           <SidebarProvider>
             <AppContent />
-            <CartSidebar />
             <BackToTop />
             <NewsletterPopup />
             <ToastContainer position="bottom-right" autoClose={2000} />
